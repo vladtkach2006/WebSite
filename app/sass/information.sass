@@ -1,0 +1,96 @@
+@import 'index'
+
+.information
+  background: linear-gradient($linear-gradient)
+  position: relative
+  color: #fff
+
+  @media(min-width: 1000px)
+    &::after, &::before
+      z-index: 0
+      content: ''
+      position: absolute
+      left: 0
+      width: 100%
+      background-color: #fff
+
+    &::after
+      height: 130px
+      bottom: -1px
+
+    &::before
+      height: 80px
+      top: -1px
+
+  @media(max-width: 992px)
+    > div
+      flex-wrap: wrap
+
+  div
+    z-index: 1
+
+  .block
+    margin-bottom: 50px
+
+    &.left-aling
+      div:first-child
+        padding-right: 25px
+
+    &:first-child
+      margin-top: 230px
+
+    @media(max-width: 1400px)
+      &:first-child
+        margin-top: 180px
+
+    @media(max-width: 1199px)
+      &:first-child
+        margin-top: 140px
+
+    @media(max-width: 1000px)
+      &:first-child
+        margin-top: 50px
+
+    h4
+      font-weight: 700
+      font-size: 22px
+
+    p
+      font-size: 16px
+
+  .image
+    position: relative
+
+    @media(max-width: 500px)
+      img
+        width: 100%
+
+    @media(max-width: 999px)
+      width: 100%
+      text-align: center
+
+    .video-play
+      position: absolute
+      top: 42%
+      left: 43%
+      z-index: 2
+      transition: all 0.4s
+      font-size: 50px
+
+      &:hover
+        opacity: 0.8
+        transform: scale(1.10)
+
+    @media(max-width: 999px)
+      .video-play
+        left: 45%
+
+    @media(max-width: 768px)
+      .video-play
+        left: 44%
+
+    @media(max-width: 500px)
+      .video-play
+        top: 45%
+        left: 45%
+        font-size: 35px

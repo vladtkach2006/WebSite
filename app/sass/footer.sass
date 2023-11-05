@@ -1,0 +1,44 @@
+@import 'index'
+
+footer
+  padding-top: 40px
+  padding-bottom: 20px
+  text-align: center
+
+  ul
+    list-style: none
+    margin: initial
+
+    @media(max-width: 799px)
+      padding: 0
+
+    li
+      display: inline-block
+      font-weight: 700
+
+      @media(max-width: 799px)
+        display: block
+        margin-top: 30px
+
+      @media(min-width: 800px)
+        &:not(:last-child)
+          margin-right: 50px
+
+      a
+        color: #363636
+        text-transform: uppercase
+        font-size: 18px
+
+        &:hover
+          color: #363636
+
+        &::after
+          content: ''
+          width: 0%
+          display: block
+          height: 2px
+          transition: all 0.5s ease
+          background: linear-gradient($linear-gradient)
+
+        &:hover::after
+          width: 100%

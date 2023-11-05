@@ -1,0 +1,43 @@
+@import 'index'
+
+.features
+  margin-top: 20px
+  padding-bottom: 90px
+  border-bottom: 2px solid silver
+
+  img
+    width: 100%
+
+  .block
+    @extend .flex
+    align-items: center
+
+    @media(max-width: 767px)
+      flex-wrap: wrap
+
+      .order-mobile
+        order: 2
+        margin-top: 30px
+
+    > div
+      width: 100%
+      text-align: center
+
+    p
+      color: #808080
+
+    .info
+      @media(min-width: 767px)
+        max-width: 500px
+
+      h2
+        font-size: 45px
+        font-weight: 700
+
+        .dot
+          color: #de173f
+          font-weight: 700
+
+    @media(max-width: 767px)
+      h2
+        font-size: 30px!important

@@ -1,0 +1,51 @@
+@import 'index'
+
+.overflow-hidden
+  overflow: hidden
+
+#modal-video
+  overflow-y: hidden
+  display: none
+
+  &::before
+    content: ''
+    display: block
+    position: fixed
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    background: rgba(0, 0, 0, 0.9)
+    z-index: 10000
+
+  .close-button
+    position: fixed
+    top: 30px
+    right: 30px
+    color: #fff
+    font-size: 40px
+    z-index: 10000
+    cursor: pointer
+    transition: all 0.3s
+
+    &:hover
+      color: #bebebe
+      transform: scale(1.10)
+
+  iframe
+    position: fixed
+    z-index: 10000
+    top: 10%
+    right: 10%
+    width: 80%
+    min-height: 80%
+
+    @media(min-width: 1300px)
+      top: 5%
+      max-height: 90%
+
+    @media(min-width: 2600px)
+      max-height: 90%
+
+    @media(min-width: 3500px)
+      max-height: 90%
